@@ -1,0 +1,12 @@
+.background, .background .pane, .background .item, .background .item-complex .item-content{
+    background-color: #48908D
+}
+
+.center {
+    margin: auto;
+    text-align: center;
+}
+
+.content {
+    color: white;
+}
