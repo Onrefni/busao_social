@@ -1,7 +1,16 @@
-.background, .background .pane, .background .item, .background .item-complex .item-content{
-    background-color: #48908D
+.background, .background .pane{
+    background-color: #48908D;
 }
 
+/*
+.background .item, .background .item-complex .item-content {
+    background-color: #80B2B1;
+}
+
+input::-moz-placeholder {
+    color: white;
+}
+*/
 .center {
     margin: auto;
     text-align: center;
