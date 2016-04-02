@@ -2,7 +2,6 @@
     background-color: #48908D;
 }
 
-/*
 .background .item, .background .item-complex .item-content {
     background-color: #80B2B1;
 }
@@ -10,7 +9,15 @@
 input::-moz-placeholder {
     color: white;
 }
-*/
+
+input::-webkit-input-placeholder {
+    color: white;
+}
+
+input::-ms-input-placeholder {
+    color: white;
+}
+
 .center {
     margin: auto;
     text-align: center;
@@ -18,4 +25,8 @@ input::-moz-placeholder {
 
 .content {
     color: white;
+}
+
+.colored-label {
+    color: #21D099;
 }
