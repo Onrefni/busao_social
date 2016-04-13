@@ -1,33 +1,35 @@
 <ion-view view-title="Login" name="login-view">
     <ion-content class="padding">
-        <div class="center">
-            <br /><br /><br /><br /><br />
-            <img src="img/user-icon.png" alt="Foto do perfil" />
-            <br />
-            <span class="colored-label">
-                Tap to upload
-            </span>
-            <br /><br />
-            <label class="item item-input">
-                <i class="icon ion-person placeholder-icon"></i>
-                <input type="text" placeholder="Usu&aacute;rio"/>
-            </label>
-            <label class="item item-input">
-                <i class="icon ion-ios-locked placeholder-icon"></i>
-                <input type="password" placeholder="Senha"/>
-            </label>
-            <label class="item item-input">
-                <i class="icon ion-email placeholder-icon"></i>
-                <input type="email" placeholder="E-mail"/>
-            </label>
-            <label class="item item-input">
-                <i class="icon ion-iphone placeholder-icon"></i>
-                <input type="tel" placeholder="Telefone"/>
-            </label>
-            <br />
-            <button class="button button-block button-balanced">
-                Login
-            </button>
-        </div>
+        <form ng-submit="registerUser(user)">
+            <div class="center">
+                <br /><br /><br /><br /><br />
+                <img actual-src="{{lastPhoto}}" ng-src="img/user-icon.png"  ng-click="getPhoto()" />
+                <br />
+                <span class="colored-label">
+                    Tap to upload
+                </span>
+                <br /><br />
+                <label class="item item-input">
+                    <i class="icon ion-person placeholder-icon"></i>
+                    <input type="text" placeholder="Usu&aacute;rio" ng-model="user.user" />
+                </label>
+                <label class="item item-input">
+                    <i class="icon ion-ios-locked placeholder-icon"></i>
+                    <input type="password" placeholder="Senha" ng-model="user.password" />
+                </label>
+                <label class="item item-input">
+                    <i class="icon ion-email placeholder-icon"></i>
+                    <input type="email" placeholder="E-mail" ng-model="user.email" />
+                </label>
+                <label class="item item-input">
+                    <i class="icon ion-iphone placeholder-icon"></i>
+                    <input type="tel" placeholder="Telefone" ng-model="user.phone" />
+                </label>
+                <br />
+                <button class="button button-block button-balanced" type="submit">
+                    Cadastrar
+                </button>
+            </div>
+        </form>
     </ion-content>
 </ion-view>

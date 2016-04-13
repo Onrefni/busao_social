@@ -43,9 +43,9 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
 
     .state('register', {
         url: '/register',
+        controller: 'RegisterCtrl',
         templateUrl: 'templates/register.html'
-    })
-    ;
+    });
 
     // if none of the above states are matched, use this as the fallback
     $urlRouterProvider.otherwise('/initial');

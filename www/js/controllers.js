@@ -1,5 +1,20 @@
 angular.module('starter.controllers', [])
 
+.controller('RegisterCtrl', function($scope, Camera) {
+    $scope.getPhoto = function() {
+        Camera.getPicture().then(function(imageURI) {
+            $scope.lastPhoto = imageURI;
+        }, function(err) {
+            $scope.lastPhoto = null;
+        }, {
+            quality: 75,
+            targetWidth: 320,
+            targetHeight: 320,
+            saveToPhotoAlbum: false
+        });
+    };
+})
+
 .controller('DashCtrl', function($scope) {})
 
 .controller('ChatsCtrl', function($scope, Chats) {
